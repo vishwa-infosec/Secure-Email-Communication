@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        {% if decrypted %}
+            <div class="alert alert-success" role="alert">
+                Email Decrypted successfully!
+            </div>
+            <p>Subject: {{subject}}</p>
+            <p>Body: {{body}}</p>
+            
+        {% else %}
+            <div class="alert alert-danger" role="alert">
+                Error decrypting email. Please try again.
+                {{error}}
+            </div>
+        {% endif %}
+        <a href="/">Back to form</a>
+    </div>
+</body>
+</html>

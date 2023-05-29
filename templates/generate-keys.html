@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Keys</title>
+</head>
+<body>
+    <h1>Generated Keys</h1>
+    <p> Public Key: {{ public_key }} </p>
+        <br>
+    <p> Private Key: {{ private_key }} </p>
+    <p>
+        Alternatively, you can download the keys directly:
+        <br>
+        Public Key: <a href="{{ url_for('download_public_key') }}" target="_blank">Download</a>
+        <br>
+        Private Key: <a href="{{ url_for('download_private_key') }}" target="_blank">Download</a>
+    </p>
+</body>
+</html>
