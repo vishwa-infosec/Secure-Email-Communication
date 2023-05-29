@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        {% if success %}
+            <div class="alert alert-success" role="alert">
+                Email sent successfully!
+            </div>
+        {% else %}
+            <div class="alert alert-danger" role="alert">
+                Error sending email. Please try again.
+                {{error}}
+            </div>
+        {% endif %}
+        <a href="/">Back to form</a>
+    </div>
+</body>
+</html>
